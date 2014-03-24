@@ -9,7 +9,8 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class PageRank {
+public class PageRank 
+{
 
 	static LinkedHashMap<Integer, Integer> forwardmap = new LinkedHashMap<Integer, Integer>();
 	static LinkedHashMap<Integer, String> backwardmap = new LinkedHashMap<Integer, String>();

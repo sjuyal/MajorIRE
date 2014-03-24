@@ -6,4 +6,5 @@ searchid/*
 .project
 .classpath
 .settings/
-xx
+*~
+*.swp
