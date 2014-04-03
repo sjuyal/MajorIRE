@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -48,7 +47,7 @@ public class PageRank {
 
 	public static void main(String[] args) {
 		try {
-			String folder = "/media/shashank/Windows/Wikipedia/";
+			String folder = "/media/shashank/Windows/Wikipedia/fandbnew";
 			String forward = "forward-index";
 			String backward = "backward-index";
 
@@ -58,7 +57,7 @@ public class PageRank {
 
 			int totalnumofpages = 14041179;
 
-			float damping = 0.50f;
+			float damping = 0.85f;
 
 			float pagerank[] = new float[50000000];
 			float const1 = (1 - damping);
@@ -91,7 +90,7 @@ public class PageRank {
 				}
 
 				System.out.println("Settled so far:"+count);
-				if((count==totalnumofpages) | Math.abs(precount-count)<100000)
+				if((count==totalnumofpages) | Math.abs(precount-count)<50000)
 					break;
 				i++;
 			}

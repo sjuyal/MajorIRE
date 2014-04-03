@@ -1,6 +1,7 @@
 data/*
 intermediate\ files/*
 searchid/*
+searchidnew/*
 *.class
 */*.class
 .project

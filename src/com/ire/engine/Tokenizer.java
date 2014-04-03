@@ -19,7 +19,7 @@ public class Tokenizer {
 	static{
 		try {
 			System.out.println("Started! :O");
-			File file=new File("tlpid-index.txt");
+			File file=new File("./searchidnew/tlpid-index.txt");
 			FileReader fr=new FileReader(file);
 			BufferedReader br=new BufferedReader(fr);
 			String line;
@@ -176,7 +176,7 @@ public class Tokenizer {
 	public static String fetchIndex(String val) {
 		try {
 			// System.out.println("Searching for:" + val);
-			File file = new File("./searchid/tersearch");
+			File file = new File("./searchidnew/tersearch");
 			FileReader fr = new FileReader(file);
 			BufferedReader br = new BufferedReader(fr);
 			String line;
@@ -188,7 +188,7 @@ public class Tokenizer {
 				}
 				i++;
 			}
-			file = new File("./searchid/secsearchid" + i);
+			file = new File("./searchidnew/secsearchid" + i);
 			// System.out.println("Searching file:" + "./searchid/secsearchid"
 			// +i);
 			br.close();
@@ -208,7 +208,7 @@ public class Tokenizer {
 				store = i + (store * 100);
 			else
 				store = i - 1 + (store * 100);
-			file = new File("./searchid/searchid" + store);
+			file = new File("./searchidnew/searchid" + store);
 			// System.out.println("Searching file:" + "./searchid/searchid"
 			// +store);
 			br.close();

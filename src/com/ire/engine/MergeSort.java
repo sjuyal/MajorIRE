@@ -15,10 +15,19 @@ public class MergeSort {
 	 */
 	public static void main(String[] args) {
 		long time1 = System.currentTimeMillis();
-		KWayMergeSortInteger("backward-index", 562, "backward", "/media/shashank/Windows/Wikipedia/");
-		//MakeSecondary("secsearchid", "./searchid", "secsearch", "tersearch");
+		KWayMergeSortInteger("backward-index", 562, "backward", "/media/shashank/Windows/Wikipedia/fandbnew");
+		//KWayMergeSortString("tlpid-index.txt", 141, "title-pageid.txt", "./intermediate files/");
+		//char ch='z';
+		//for(int i=5;i<=26;i++){
+			//MakeSecondary(ch+"oldfinal", "/media/shashank/Windows/Wikipedia/earlier/"+ch+"old", ch+"old.txt", "secold_"+ch);
+		//	ch++;
+		//}
+		
+		//MakeSecondary("secsearchid", "./searchidnew", "secsearch", "tersearch");  // Change split to 100
+		//MakeSecondary("searchid", "./searchidnew", "tlpid-index.txt", "secsearch");  // Change split to 1000 (First)
+		
 		//MakeTertiary("./searchid", "secsearch.txt", "tersearch");
-		//String ret=new Tokenizer().fetchIndex("Sachin Tendulkar");
+		//String ret=Tokenizer.fetchIndex("! (math)");
 		//System.out.println(ret);
 		long time2 = System.currentTimeMillis() - time1;
 		System.out.println("Time Taken in Seconds:" + time2 / 1000.0);
@@ -56,7 +65,7 @@ public class MergeSort {
 			FileReader fr=new FileReader(read);
 			BufferedReader br=new BufferedReader(fr);
 			int fcount=0,i=0;
-			int split=100;
+			int split=1000;
 			File towrite= new File(folder+"/"+finalfileprefix + fcount);
 			FileWriter fw=new FileWriter(towrite);
 			BufferedWriter bw=new BufferedWriter(fw);
@@ -101,7 +110,7 @@ public class MergeSort {
 	public static void KWayMergeSortString(String finalfile, int filecount,String prefix,String folder){
 		
 		try {
-			File towrite= new File(folder+"/"+finalfile + ".txt");
+			File towrite= new File(folder+"/"+finalfile);
 			FileWriter fw=new FileWriter(towrite);
 			BufferedWriter bw=new BufferedWriter(fw);
 
@@ -146,7 +155,7 @@ public class MergeSort {
 					}
 				}
 				
-				if (smallest.equalsIgnoreCase("|")) {
+				if (smallest.equals("|")) {
 					flag = 0;
 					continue;
 				}
@@ -161,7 +170,7 @@ public class MergeSort {
 				for (int i = 0; i < filecount; i++) {
 					if (words[i] == null)
 						continue;
-					if (smallest.equalsIgnoreCase(words[i]) && index != i) {
+					if (smallest.equals(words[i]) && index != i) {
 						String res[] = line[i].split(":");
 						sb.append(","+res[1]);
 						line[i] = br[i].readLine();

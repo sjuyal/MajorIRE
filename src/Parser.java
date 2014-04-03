@@ -31,7 +31,7 @@ public class Parser {
 			// String to = args[1];
 			String from ="/media/shashank/Windows/Wikipedia/enwiki-latest-pages-articles.xml";
 			String to = "backward";
-			String folder="/media/shashank/Windows/Wikipedia/";
+			String folder="/media/shashank/Windows/Wikipedia/fandbnew/";
 			//String from = "sample.xml";
 			//String to = "backward";
 			//String folder=".";
