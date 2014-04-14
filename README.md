@@ -2,6 +2,11 @@ Major Project Phase-1
 --------------------
 --------------------
 **Group 21**
+
+Description
+-------------------
+Local PageRank Approximation and Implementation
+ 
 System Requirements
 -------------------
 
