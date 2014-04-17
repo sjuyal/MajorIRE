@@ -214,6 +214,7 @@ public class LocalApprox {
 				}
 				System.out.println("NewPageRank:" + queryPid + "-->"
 						+ queryPagerank);
+				System.out.println("www");
 				System.out.println("OldPageRank:" + queryPid + "-->"
 						+ pagerank[Integer.parseInt(queryPid)]);
 				System.out.println("Time:"+time2/1000.0);
